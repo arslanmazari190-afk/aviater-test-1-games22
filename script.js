@@ -429,7 +429,11 @@
       }
 
       function connectLiveGame() {
-        const events = new EventSource("/events");
+        const events = new EventSource("https://onrender.com");
+
+
+      
+
         events.onmessage = (event) => {
           try {
             applyLiveState(JSON.parse(event.data));
